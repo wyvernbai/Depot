@@ -17,7 +17,7 @@ class ProductTest < ActiveSupport::TestCase
         #assert_equal product.price, product.errors[:price].join('; ')
         product.price = -1
         assert product.invalid?
-        assert_equal "must be greater than or equal to 0.01",
+        assert_equal "must be greater than or equal to 1",
             product.errors[:price].join('; ')
         product.price = 1
         assert product.valid?
