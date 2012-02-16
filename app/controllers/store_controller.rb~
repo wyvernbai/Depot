@@ -1,9 +1,0 @@
-class StoreController < ApplicationController
-  def index
-      @products = Product.all
-      time_string = Time.now.to_s.split(/[\s]+/)
-      @day = time_string[0]
-      @time = time_string[1]
-  end
-
-end
