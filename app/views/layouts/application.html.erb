@@ -20,7 +20,7 @@
                             <a href="http://www..../faq">Questions</a><br />
                             <a href="http://www..../news">News</a><br />
                             <a href="http://www..../contact">Contact</a><br />
-                            <p><%= @day + " " + @time %></p>
+                            <p><%= begin; time_string = Time.now.to_s.split(/[\s]+/);@day = time_string[0]; @time = time_string[1]; @day + " " + @time end %></p>
                         </div>
                         <div id="main">
                             <%= yield %><!-- <label id="code.depot.e.include"/> -->
